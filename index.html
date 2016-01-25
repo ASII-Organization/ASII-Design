@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="asii">
+<meta name="viewport" content="width=device-width" />
+<head>
+    <meta http-equiv="Content-Type" content="charset=UTF-8">
+    <title>ASII - Asocia&#539;ia Studen&#539;ilor Informaticieni Ie&#x219;eni</title>
+    <meta name="keywords" content="fii iasi, fii, asii, informaticieni, asociatie,studentie, iasi, voluntariat iasi, facultatea de informatica, informatica" />
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <meta property="og:title" content="ASII - Asociatia Studentilor Informaticieni Ieseni" />
+    <meta property="og:description" content="Asociaţia Studenţilor Informaticieni Ieşeni este o organizaţie non-guvernamentală, apolitică şi non-profit ce are ca scop apărarea demnităţii, depturilor şi intereselor socio-profesionale ale studenţilor din cadrul Facultăţii de Informatică din Iaşi." />
+    <meta property="og:image" content="http://test.asii.ro/images/logo.png" />
+    <meta property="og:app" content="1550819495244039" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/angular-simple-calendar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '1550819495244039',
+                xfbml      : true,
+                version    : 'v2.5'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+</head>
+<body id="home">
+<div class="loader">
+    <h2>Bun venit pe ASII.ro ...</h2>
+    <img src="images/loader.svg" />
+</div>
+<div class="ui sidebar inverted vertical menu black">
+    <a href="#home" class="item">
+        <i class="home icon"></i>
+        Acasa
+    </a>
+    <a href="#features" class="item">
+        <i class="info icon"></i>
+        Despre
+    </a>
+    <a href="#departamente" class="item">
+        <i class="users icon"></i>
+        Departamente
+    </a>
+    <a href="#proiecte" class="item">
+        <i class="idea icon"></i>
+        Proiecte
+    </a>
+    <a href="#galerie" class="item">
+        <i class="photo icon"></i>
+        Galerie
+    </a>
+    <a href="#calendar" class="item">
+        <i class="calendar icon"></i>
+        Calendar
+    </a>
+</div>
+<div class="pusher">
+    <header>
+        <div class="ui container">
+            <ul class="menu-header">
+                <li><a href="#home" class="scroll">Acasa</a></li>
+                <li><a href="#features" class="scroll">Despre</a></li>
+                <li><a href="#departamente" class="scroll">Departamente</a></li>
+                <li class="logo"><a href="#home"><img src="images/logo.png" alt="Logo ASII" /></a></li>
+                <li><a href="#proiecte" class="scroll">Proiecte</a></li>
+                <li><a href="#galerie" class="scroll">Galerie</a></li>
+                <li><a href="#calendar" class="scroll">Calendar</a></li>
+            </ul>
+            <div class="responsive-mode">
+                <img class="logo-responsive" src="images/logo.png" alt="Logo ASII" />
+                <i class="sidebar icon menuResponsive"></i>
+            </div>
+        </div>
+    </header>
+    <section class="banner wave">
+        <h2 class="floating">Nu l&#259;sa studen&#539;ia s&#259; treac&#259; pe l&#226;ng&#259; tine!</h2>
+        <h3 class="floating">Asocia&#539;ia Studen&#539;ilor Informaticieni Ie&#351;eni</h3>
+    </section>
+    <section id="features">
+        <div class="ui container">
+            <h2>Despre noi...</h2>
+            <p data-sr>
+                Asocia&#355;ia Studen&#355;ilor Informaticieni Ie&#351;eni este o organiza&#355;ie non-guvernamental&#259;, apolitic&#259; &#351;i non-profit ce are ca scop ap&#259;rarea demnit&#259;&#355;ii, depturilor &#351;i intereselor socio-profesionale ale studen&#355;ilor din cadrul Facult&#259;&#355;ii de Informatic&#259; din Ia&#351;i.
+            </p>
+            <p data-sr>
+                ASII a fost &#206;nfiin&#355;at&#259; pe data de 12 martie 1990, devenind din 10 septembrie persoan&#259; juridic&#259; de sine st&#259;t&#259;toare.
+            </p>
+            <p data-sr>
+                ASII este un grup de peste 100 de studen&#355;i c&#259;rora le place s&#259; se implice,care &#351;tiu s&#259; combine prietenia, distrac&#355;ia &#351;i munca, astfel &#206;nc&#226;t perioada facult&#259;&#355;ii ajunge s&#259; reprezinte cei mai frumo&#351;i ani!Aici intalnind prieteni de &#206;ncredere, cu care vei &#206;nv&#259;&#355;a s&#259; lucrezi la proiecte interesante, cu renume, sau chiar la idei propuse de tine, descoperind astfel c&#259; e&#351;ti bun la lucruri pe care nici m&#259;car nu &#351;tiai c&#259; le po&#539;i face
+                Aici &#206;nv&#259;&#539;&#259;m s&#259; ne dezvolt&#259;m din toate punctele de vedere.
+            </p>
+            <p data-sr>
+                Fiecare membru ASII sus&#539;inand &#351;i promov&#226;nd acelea&#351;i valori:
+            </p>
+            <div class="ui two column stackable grid features-list">
+                <div class="row" data-sr>
+                    <div class="column">
+                        <img src="images/feature-1.png" alt="" />
+                        <h2>Implicare</h2>
+                        <span>C&#259;ut&#259;m sa g&#259;sim solu&#355;ii problemelor din jurul nostru</span>
+                    </div>
+                    <div class="column">
+                        <img src="images/feature-2.png" alt="" />
+                        <h2>Perfec&#539;ionare continua</h2>
+                        <span>Mereu vrem sa inva&#355;&#259;m lucruri noi in cadrul trainingurilor, proiectelor si numeroaselor activita&#355;i din cadrul asocia&#355;iei</span>
+                    </div>
+                </div>
+                <div class="row" data-sr>
+                    <div class="column">
+                        <img src="images/feature-3.png" alt="" />
+                        <h2>Dezvoltare personal&#259;</h2>
+                        <span>Gasim moduri de a duce la bun sfar&#351;it proiectele noastre</span>
+                    </div>
+                    <div class="column">
+                        <img src="images/feature-4.png" alt="" />
+                        <h2>Prietenie</h2>
+                        <span>G&#259;sim moduri de a duce la bun sfarsit proiectele noastre</span>
+                    </div>
+                </div>
+                <div class="row" data-sr>
+                    <div class="column">
+                        <img src="images/feature-5.png" alt="" />
+                        <h2>Organizare</h2>
+                        <span>Vrem s&#259; dob&#226;ndim aptitudini noi si s&#259; le oferim mai departe membrilor noi</span>
+                    </div>
+                    <div class="column">
+                        <img src="images/feature-6.png" alt="" />
+                        <h2>Lucru in echipa</h2>
+                        <span>Impreun&#259; reusim s&#259; d&#259;m via&#355;a ideilor</span>
+                    </div>
+                </div>
+            </div>
+            <h3 data-sr class="ui header centered">E&#351;ti curios din cine este alc&#259;tuit&#259; A.S.I.I. ?</h3>
+            <div class="centreaza">
+                <div class="ui button red inverted massive veziMembrii">Vezi membrii ASII</div>
+            </div>
+            <div class="ui modal membriiAsii" ng-controller="membrii">
+                <div class="header">
+                    <select class="ui dropdown selectDept" ng-model="departament" ng-change="update()">
+                        <option value="Staff">Staff</option>
+                        <option value="Evaluari">Evaluari</option>
+                        <option value="IT">IT</option>
+                        <option value="PR&Media">PR&Media</option>
+                        <option value="Proiecte">Proiecte</option>
+                        <option value="Relatii Externe">Rela&#539;ii Externe</option>
+                        <option value="Relatii Interne">Rela&#539;ii Interne</option>
+                        <option value="Alumni">Alumni</option>
+                        <option value="Colaborator">Colaboratori ASII</option>
+                    </select>
+                </div>
+                <div class="ui segment ng-class: {loading: load};">
+                    <div class="ui three fluid stackable cards">
+                        <div class="card" ng-repeat="membru in membrii">
+                            <div class="content">
+                                <img class="right floated rounded tiny ui image" src="{{membru.picture}}" alt="Default Girl" />
+                                <div class="header">{{membru.name}}</div>
+                                <div class="meta">{{membru.position}}</div>
+                                <div class="description">
+                                    <a ng-if="membru.facebook" href="{{membru.facebook}}"><i class="icon facebook square"></i></a>
+                                    <a ng-if="membru.gmail" href="MAILTO:{{membru.gmail}}"><i class="icon google plus square"></i></a>
+                                    <a ng-if="membru.twitter" href="{{membru.twitter}}"><i class="icon twitter square"></i></a>
+                                    <a ng-if="membru.linkedin" href="{{membru.linkedin}}"><i class="icon linkedin"></i></a>
+                                    <a ng-if="membru.ymail" href="MAILTO:{{membru.ymail}}"><i class="icon yahoo"></i></a>
+                                    <a ng-if="membru.skype" class="skypebutton" title="{{membru.skype}}" data-content="{{membru.skype}}" href="#"><i class="icon skype"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="departamente"  ng-controller="departamentModal">
+        <div class="ui container">
+            <div class="ui three column stackable grid">
+                <div class="row" data-sr>
+                    <div class="column" data-id="modalIT">
+                        <img src="images/departamente/IT2.png" data-change="images/departamente/IT.png" alt="Departament IT" />
+                        <h2>Departamentul IT</h2>
+                    </div>
+                    <div class="column" data-id="modalEvaluari">
+                        <img src="images/departamente/Evalu2ari2.png" data-change="images/departamente/Evalu2ari.png" alt="Departament Evaluari" />
+                        <h2>Departamentul Evalu&#259;ri</h2>
+                    </div>
+                    <div class="column" data-id="modalPRMedia">
+                        <img src="images/departamente/PR&Media2.png" data-change="images/departamente/PR&Media.png" alt="Departament PR-Media" />
+                        <h2>Departamentul PR&amp;Media</h2>
+                    </div>
+                </div>
+                <div class="row" data-sr>
+                    <div class="column" data-id="modalProiect">
+                        <img src="images/departamente/proiecte2.png" data-change="images/departamente/proiecte.png" alt="Departament Proiecte" />
+                        <h2 class="fix">Departamentul Proiecte</h2>
+                    </div>
+                    <div class="column" data-id="modalExterne">
+                        <img src="images/departamente/Relatii_Externe2.png" data-change="images/departamente/Relatii_Externe.png" alt="Departament Relatii externe" />
+                        <h2>Departamentul Rela&#539;ii Externe</h2>
+                    </div>
+                    <div class="column" data-id="modalInterne">
+                        <img src="images/departamente/Relatii_Interne2.png" data-change="images/departamente/Relatii_Interne.png" alt="Departament Relatii interne" />
+                        <h2 class="fix">Departamentul Rela&#539;ii Interne</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui modal departamentModal" id="modalIT" ng-include="'modals/it.html'"></div>
+        <div class="ui modal departamentModal" id="modalEvaluari" ng-include="'modals/evaluari.html'"></div>
+        <div class="ui modal departamentModal" id="modalPRMedia" ng-include="'modals/prmedia.html'"></div>
+        <div class="ui modal departamentModal" id="modalProiect" ng-include="'modals/proiecte.html'"></div>
+        <div class="ui modal departamentModal" id="modalExterne" ng-include="'modals/externe.html'"></div>
+        <div class="ui modal departamentModal" id="modalInterne" ng-include="'modals/interne.html'"></div>
+    </section>
+    <section id="proiecte">
+        <div class="ui container">
+            <h2 data-sr>Proiectele Noastre</h2>
+            <div class="ui stackable grid">
+                <div class="row">
+                    <div class="five wide column">
+                        <div class="ui special cards">
+                            <div class="ui fluid card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="" class="ui labeled center icon button inverted">
+                                                    <i class="wizard icon"></i>
+                                                    Vezi site
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="images/portofoliu/CraciunInima2.png">
+                                </div>
+                                <div class="content">
+                                    <a class="header">Crăciun din inimă de student</a>
+                                    <div class="meta">
+                                        <span class="date">Ediția viitoare in 23/12/2015</span>
+                                    </div>
+                                </div>
+                                <div class="extra content center">
+                                    Eveniment caritabil organizat de studen&#355;i pentru a fi al&#259;turi de cei care au nevoie. Ne place sa aducem z&#226;mbetul pe buze, s&#259; citim fericirea &#238;n ochii unui copil, s&#259; aducem spiritul s&#259;rb&#259;torilor in sufletele tuturor.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="five wide column">
+                        <div class="ui special cards">
+                            <div class="ui fluid card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="" class="ui labeled center icon button inverted">
+                                                    <i class="wizard icon"></i>
+                                                    Vezi site
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="images/portofoliu/BB2.png">
+                                </div>
+                                <div class="content">
+                                    <a class="header">Balul bobocilor</a>
+                                    <div class="meta">
+                                        <span class="date">Ediția viitoare in 27/11/2015</span>
+                                    </div>
+                                </div>
+                                <div class="extra content center">
+                                    Pentru că, pe an ce trece, bobocii FII sunt din ce în ce mai talentați și mai frumoși, organizăm in cinstea lor Balul Bobocilor, o petrecere tematică al cărei principal punct de interes este concursul Miss/Mister Boboc.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="five wide column">
+                        <div class="ui special cards">
+                            <div class="ui fluid card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="" class="ui labeled center icon button inverted">
+                                                    <i class="wizard icon"></i>
+                                                    Vezi site
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="images/portofoliu/indoor2.png">
+                                </div>
+                                <div class="content">
+                                    <a class="header">Olimpiada Indoor</a>
+                                    <div class="meta">
+                                        <span class="date">Ediția viitoare in 27/01/2016</span>
+                                    </div>
+                                </div>
+                                <div class="extra content center">
+                                    Biliard, bowling, ping-pong, șah, table sau joc de carți. Mai scurt, ASII Indoor! Această este competiția in care ne simțim bine în spatele ușilor închise.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="five wide column">
+                        <div class="ui special cards">
+                            <div class="ui fluid card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="" class="ui labeled center icon button inverted">
+                                                    <i class="wizard icon"></i>
+                                                    Vezi site
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="images/portofoliu/LANParty2.png">
+                                </div>
+                                <div class="content">
+                                    <a class="header">LAN Party</a>
+                                    <div class="meta">
+                                        <span class="date">Ediția viitoare in 27/01/2016</span>
+                                    </div>
+                                </div>
+                                <div class="extra content center">
+                                    Este o competiție de jocuri in rețea, organizată in fiecare primăvară pentru studenții FII. Pentru câteva zile, laboratoarele sunt cadrul in care toată lumea se distrează, se relaxează, interactionează.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="five wide column">
+                        <div class="ui special cards">
+                            <div class="ui fluid card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="" class="ui labeled center icon button inverted">
+                                                    <i class="wizard icon"></i>
+                                                    Vezi site
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="images/portofoliu/FIIPractic2.png">
+                                </div>
+                                <div class="content">
+                                    <a class="header">FII Practic</a>
+                                    <div class="meta">
+                                        <span class="date">Ediția viitoare in 27/01/2016</span>
+                                    </div>
+                                </div>
+                                <div class="extra content center">
+                                    Este locul în care inveți alături de oameni pasionați, unde reușești sa manuiești tehnologii actuale si sa îți dezvolți abilitați noi. Într-un cuvânt FII Practic reprezintă DEZVOLTARE!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="five wide column">
+                        <div class="ui special cards">
+                            <div class="ui fluid card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="" class="ui labeled center icon button inverted">
+                                                    <i class="wizard icon"></i>
+                                                    Vezi site
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="images/portofoliu/outdoor2.png">
+                                </div>
+                                <div class="content">
+                                    <a class="header">Olimpiada Outdoor</a>
+                                    <div class="meta">
+                                        <span class="date">Ediția viitoare in 27/01/2016</span>
+                                    </div>
+                                </div>
+                                <div class="extra content center">
+                                    Sportul oferă momente inedite de relexare, dezvoltă spiritul competitiv şi este benefic sănătăţii noastre. Olimpiada AŞII Outdoor are ca scop dezvoltarea aptitudinilor sportive într-un mediu competitiv şi prietenos.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seven wide column aux">
+                        <div class="ui special cards">
+                            <div class="ui fluid card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="" class="ui labeled center icon button inverted">
+                                                    <i class="wizard icon"></i>
+                                                    Vezi site
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="images/portofoliu/GETA2.png">
+                                </div>
+                                <div class="content">
+                                    <a class="header">G.E.T.A.</a>
+                                    <div class="meta">
+                                        <span class="date">Ediția viitoare în 27/01/2016</span>
+                                    </div>
+                                </div>
+                                <div class="extra content center">
+                                    Suntem o "mâna de oameni" cu un grad ridicat de empatie şi ne place să aducem un plus în dezvoltarea oamenilor, ne place să lom atitudine atunci când lucrurile pot merge mai bine şi punem pasiune în ceea ce facem.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seven wide column aux">
+                        <div class="ui special cards">
+                            <div class="ui fluid card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="" class="ui labeled center icon button inverted">
+                                                    <i class="wizard icon"></i>
+                                                    Vezi site
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="images/portofoliu/ziar.png">
+                                </div>
+                                <div class="content">
+                                    <a class="header">Ziarul de ASII</a>
+                                    <div class="meta">
+                                        <span class="date">Ediția viitoare în 27/01/2016</span>
+                                    </div>
+                                </div>
+                                <div class="extra content center">
+                                    Ziarul de ASII este mijlocul prin care ne facem cunoscute ideile şi reuşitele, e modul prin care încercăm să va ţinem la curent cu ceea ce se întâmplă în Facultate, în Universitate şi în Iaşi, având scopul de a va face studenţia mai uşoară şi mai frumoasă.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="galerie">
+        <div class="ui container">
+            <h2>Prezentare</h2>
+            <div class="ui embed prezentareEmbed" data-source="youtube" data-url="https://www.youtube.com/embed/s2UM6SovtCE" data-placeholder="images/coperta.jpg"></div>
+            <div class="clearfloat"></div>
+        </div>
+    </section>
+    <section id="galerie2">
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden; visibility: hidden;">
+            <!-- Loading Screen -->
+            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;top:0px;left:0px;width:100%;height:100%;"></div>
+            </div>
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 800px; overflow: hidden;">
+                <div data-p="225.00" style="display: none;">
+                    <img data-u="image" src="images/slider/red.jpg" />
+                </div>
+                <div data-p="225.00" style="display: none;">
+                    <img data-u="image" src="images/slider/purple.jpg" />
+                </div>
+                <div data-p="225.00" style="display: none;">
+                    <img data-u="image" src="images/slider/blue.jpg" />
+                </div>
+            </div>
+            <!-- Bullet Navigator -->
+            <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+                <!-- bullet navigator item prototype -->
+                <div data-u="prototype" style="width:16px;height:16px;"></div>
+            </div>
+            <!-- Arrow Navigator -->
+            <span data-u="arrowleft" class="jssora22l" style="top:0px;left:12px;width:40px;height:58px;" data-autocenter="2"></span>
+            <span data-u="arrowright" class="jssora22r" style="top:0px;right:12px;width:40px;height:58px;" data-autocenter="2"></span>
+            <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
+        </div>
+    </section>
+    <section id="calendar">
+        <div class="ui container">
+            <h2 data-sr>Evenimentele noastre</h2>
+            <br/>
+            <div ng-controller="UsersIndexController" data-sr>
+                <simple-calendar events="events" options="calendarOptions" modal="modalInfo"></simple-calendar>
+                <div class="ui small modal" id="calendarModal">
+                    <i class="close icon"></i>
+                    <div class="header">{{modalInfo.modalTitle}}</div>
+                    <div class="content">
+                        {{modalInfo.modalContent}}
+                        <br />
+                        <div class="ui horizontal list modalCalendarList">
+                            <div ng-if="modalInfo.modalWebsite" class="item">
+                                <i class="linkify icon"></i>
+                                <div class="content">
+                                    <a href="{{modalInfo.modalWebsite}}">Vezi website</a>
+                                </div>
+                            </div>
+                            <div ng-if="modalInfo.modalOra" class="item">
+                                <i class="clock icon"></i>
+                                <div class="content">
+                                    <b>Ora:</b> {{modalInfo.modalOra}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="parteneri">
+        <div class="ui container">
+            <h3 class="ui horizontal divider header">
+                <i class="rain icon"></i>
+                Parteneri
+            </h3>
+            <div class="content">
+                <a href='http://www.uaic.ro'target="_blank" ><img src='images/parteneri/uaic.png' alt='Universitatea "Alexandru Ioan Cuza" Iasi'/></a>
+                <a href='http://www.info.uaic.ro' target="_blank"><img src='images/parteneri/fii_stema.png' alt='Facultatea de Informatica Iasi'/></a>
+                <br />
+                <a href='http://www.appsbroker.com/' target="_blank"><img src='images/parteneri/appsbroker.png' alt='Appsbroker'/></a>
+                <a href='http://www.beenear.com/' target="_blank"><img src='images/parteneri/beenear.png' alt='Beenear'/></a>
+                <a href='http://www.centric.eu/' target="_blank"><img src='images/parteneri/centric.png' alt='Centric' /></a>
+                <a href='http://www.CloudLab.ag/' target="_blank"><img src='images/parteneri/cloudLabAG.png' alt='CloudLabAG' /></a>
+                <a href='http://www.cynny.com/' target="_blank"><img src='images/parteneri/cynny.png' alt='Cynny' /></a>
+                <a href='http://www.endava.com/' target="_blank"><img src='images/parteneri/endava.png' alt='Endava' /></a>
+                <a href='http://www.expertNetwork.eu/home' target="_blank"><img src='images/parteneri/expertNetwork.png' alt='ExpertNetwork' /></a>
+                <a href='http://www.inteligentBee.com/' target="_blank"><img src='images/parteneri/inteligentBee.png' alt='InteligentBee' /></a>
+                <a href='http://www.levi9.com/' target="_blank"><img src='images/parteneri/levi9.png' alt='Levi9' /></a>
+                <a href='http://www.mobility-games.com/' target="_blank"><img src='images/parteneri/mobility.png' alt='Mobility' /></a>
+                <a href='http://www.ness.com/' target="_blank"><img src='images/parteneri/ness.png' alt='Ness' /></a>
+                <a href='http://www.osf-global.com/' target="_blank"><img src='images/parteneri/osf.png' alt='Osf' /></a>
+                <a href='http://www.sprocket.ro/' target="_blank"><img src='images/parteneri/sprocket.png' alt='Sprocket' /></a>
+                <a href='http://www.unicreditgroup.eu/' target="_blank"><img src='images/parteneri/unicredit.png' alt='Unicredit' /></a>
+                <a href='http://www.tss-yonder.com/' target="_blank"><img src='images/parteneri/yonder.png' alt='Yonder' /></a>
+                <a href='http://www.gravez.ro' target="_blank"><img src='images/parteneri/gravez.png' alt='Gravez.ro'/></a>
+            </div>
+            <h3 class="ui horizontal divider header">
+                <i class="book icon"></i>
+                Parteneri Training
+            </h3>
+            <div class="content">
+                <a href='http://www.vorbeste.eu' target="_blank" ><img src='images/parteneri/vorbeste.png' alt='Vorbeste' /></a>
+                <a href='http://www.it-st.ro' target="_blank" ><img src='images/parteneri/ITst.png' alt='ITst' /></a>
+            </div>
+            <h3 class="ui horizontal divider header">
+                <i class="diamond icon"></i>
+                Parteneri Media
+            </h3>
+            <div class="content">
+                <a href='http://www.360.uaic.ro/' target="_blank"><img src='images/parteneri/360uaic.png' alt='360uaic' /></a>
+                <a href='http://www.faravirusi.com' target="_blank"><img src='images/parteneri/FaraVirusi.png' alt='FaraVirusi' /></a>
+                <a href='http://www.fede.ro' target="_blank"><img src='images/parteneri/Fede.png' alt='Fede' /></a>
+                <a href='http://iasifun.ziaruldeiasi.ro/' target="_blank"><img src='images/parteneri/IasiFun.png' alt='Iasi FUN' /></a>
+                <a href='http://www.iasi.inoras.ro/' target="_blank"><img src='images/parteneri/InOras.png' alt='InOras.ro' /></a>
+                <a href='http://www.iqool.ro/' target="_blank"><img src='images/parteneri/iQool.png' alt='iQool' /></a>
+                <a href='http://www.mobzine.ro' target="_blank"><img src='images/parteneri/Mobzine.png' alt='Mobzine.ro' /></a>
+                <a href='http://www.studentul.info/' target="_blank"><img src='images/parteneri/Studentul.info.png' alt='Studentul.info' /></a>
+                <a href='http://www.wink.ro' target="_blank"><img src='images/parteneri/Wink.png' alt='Wink' /></a>
+                <a href='http://www.ziaruldeiasi.ro' target="_blank"><img src='images/parteneri/ZdeIasi.png' alt='Ziarul de Iasi' /></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="ui container">
+            Asociaţia Studenţilor Informaticieni Ieşeni (AŞII) este reprezentată de un grup de persoane determinate, creative şi dinamice, ce au în comun pasiunea pentru Informatică şi împărtăşesc un set de ţeluri şi valori. Activităţile organizate în cadrul asociaţiei se adresează studenţilor şi profesorilor Facultăţii de Informatică Iaşi, dar şi comunităţii IT din România, dorind să promoveze proactivitatea, dezvoltarea profesională, personală şi socială. <br /> Copyright &copy; ASII 2016
+        </div>
+    </footer>
+</div>
+<script src="js/scrollReveal.min.js"></script>
+<script src="js/angular-simple-calendar.js"></script>
+<script src="js/behivor.js"></script>
+</body>
+</html>
