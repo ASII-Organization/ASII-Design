@@ -4,6 +4,11 @@ jQuery(document).ready(function ($) {
             $(this).hide();
         });
     }, 1000);
+    $('.selectDept').dropdown({
+        placeholder: false
+    });
+    $('.selectDept .text').html('Staff');
+    $('.skypebutton').popup();
     var jssor_1_options = {
         $AutoPlay: true,
         $SlideDuration: 800,
@@ -15,7 +20,6 @@ jQuery(document).ready(function ($) {
             $Class: $JssorBulletNavigator$
         }
     };
-
     var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
 
     //responsive code begin
@@ -87,12 +91,44 @@ var app = angular.module('asii', ['500tech.simple-calendar']);
 app.controller('departamentModal', function($scope) {
 
 });
+app.controller('membrii', function($scope, $http) {
+    $scope.membrii = {};
+    $scope.load = false;
+    var request = $http({
+        method: "post",
+        url: 'backend/membrii.php',
+        data: "departament=Staff",
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    });
+    request.then(function(response) {
+        $scope.membrii = response.data.membrii;
+    });
+    $scope.update = function() {
+        $scope.load = true;
+        var request = $http({
+            method: "post",
+            url: 'backend/membrii.php',
+            data: "departament="+$scope.departament,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        });
+        $scope.load = false;
+        request.then(function(response) {
+            $scope.membrii = response.data.membrii;
+            $scope.load = false;
+            jQuery(document).ready(function() {
+                $scope.load = false;
+            });
+        });
+    }
+});
 app.controller('UsersIndexController', ['$scope', function($scope) {
     // ... code omitted ...
     // Dates can be passed as strings or Date objects
+    var oneWeekAgo = new Date();
+    oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
     $scope.calendarOptions = {
         defaultDate: new Date(),
-        minDate: new Date(),
+        minDate: oneWeekAgo,
         maxDate: new Date([2020, 12, 31]),
         dayNamesLength: 9, // How to display weekdays (1 for "M", 2 for "Mo", 3 for "Mon"; 9 will show full day names; default is 1)
         eventClick: $scope.eventClick,
@@ -108,25 +144,39 @@ app.controller('UsersIndexController', ['$scope', function($scope) {
 
     $scope.events = [ //Year Month Day
         {
-            title: 'Balul Bobocilor',
-            date: new Date([2015, 12, 11]),
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie aliquam ligula quis aliquet. Nullam elementum non massa et fringilla. Suspendisse nec elit vel metus dictum vestibulum id eget velit. Nulla pellentesque tortor eu cursus pharetra. Donec a consectetur neque.",
-            website: "http://balul-boocilor.asii.ro",
+            title: 'Balul de caritate',
+            date: new Date([2015, 12, 7]),
+            description: 'Luni, 7 decembrie 2015, incepand cu ora 18:00, ne vedem la Balul de Caritate "Craciun din Inima de Student" - https://www.facebook.com/events/192488591091013/! Haideti sa ajutam o mana de copilasi sa aiba un Craciun calduros si luminos!',
+            website: "",
+            ora: "18:00"
+        },
+        {
+            title: 'Excursieee!',
+            date: new Date([2015, 12, 1]),
+            description: '',
+            website: "",
+            ora: ""
+        },
+        {
+            title: 'Sedinta generala',
+            date: new Date([2015, 12, 9]),
+            description: 'Pe data de 9 decembrie la ora 20:00 in C2 va avea loc o sedinta generala la care vom alege si noul coordonator al proiectului LAN Party. Avem doi candidati, Ciprian si Daniel. O sa atasez planurile manageriale la aceasta postare. Va rog sa le cititi si sa va pregatiti sa puneti intrebari, chiar daca nu aveti drept de vot.',
+            website: "",
             ora: "20:00"
         },
         {
-            title: 'Sedinta Deschisa',
-            date: new Date([2015, 12, 21]),
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie aliquam ligula quis aliquet. Nullam elementum non massa et fringilla. Suspendisse nec elit vel metus dictum vestibulum id eget velit. Nulla pellentesque tortor eu cursus pharetra. Donec a consectetur neque.",
-            website: false,
-            ora: false
+            title: 'Sedinta de departament',
+            date: new Date([2015, 12, 8]),
+            description: '',
+            website: "",
+            ora: "20:00"
         },
         {
-            title: 'Sedinte de departament',
-            date : new Date([2015,12,27]),
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie aliquam ligula quis aliquet. Nullam elementum non massa et fringilla. Suspendisse nec elit vel metus dictum vestibulum id eget velit. Nulla pellentesque tortor eu cursus pharetra. Donec a consectetur neque.",
-            website: false,
-            ora: false
+            title: 'Sedinta de departament',
+            date: new Date([2015, 12, 15]),
+            description: '',
+            website: "",
+            ora: "20:00"
         }
     ];
 

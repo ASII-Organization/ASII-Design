@@ -235,6 +235,9 @@ header .menu-header li a:hover {
 .ui.cards > .card{
     min-height: 400px;
 }
+.membriiAsii .ui.cards > .card{
+    min-height: 150px;
+}
 #galerie {
     height: 600px;
     background:#d75b5b;
